@@ -1,0 +1,19 @@
+
+<h1>conversor-grados</h1>
+
+<br>
+<input (change)="comprobar()" (keyup)="comprobar()" type="number" value="10" [(ngModel)]="numero"/>
+&nbsp;
+<select (change)="comprobar()" [(ngModel)]="grados1">
+    <option>Celsius</option>
+    <option>Farenheit</option>
+    <option>Kelvin</option>
+</select>
+&nbsp;a&nbsp;
+<select (change)="comprobar()" [(ngModel)]="grados2">
+    <option>Celsius</option>
+    <option>Farenheit</option>
+    <option>Kelvin</option>
+</select>
+&nbsp;
+El resultado de la conversion es de {{resultado}}

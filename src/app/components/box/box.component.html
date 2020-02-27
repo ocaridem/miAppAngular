@@ -1,0 +1,23 @@
+
+<h1>{{tituloBox}}</h1>
+<p>El nombre es {{nombre}}</p>
+<button (click)="duplicar()">Duplicar</button>
+<input type="text" [(ngModel)]="nombre"/>
+<br>
+<p>El numero es {{numero}}</p>
+<input type="range" min="0" max="100" step="5" [(ngModel)]="numero"/>
+<br>
+<input type="number" [(ngModel)]="numero"/>
+<br>
+<input type="checkbox" [(ngModel)]="recibirPropaganda"/>{{recibirPropaganda}}
+<h2 *ngIf=recibirPropaganda>VAS A RECIBIR PROPAGANDA !!!!!!</h2>
+<input type="date" [(ngModel)]="fechaStr"/>{{fechaAlta}}
+<br>
+
+<p>Ciudad Seleccionada : {{ciudadSeleccionada}}</p>
+<select (change)="cambioSelector()" [(ngModel)]="ciudadSeleccionada">
+    <option>Lleida</option>
+    <option>Tarragona</option>
+    <option>Barcelona</option>
+    <option>Girona</option>
+</select>

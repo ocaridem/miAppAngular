@@ -1,0 +1,15 @@
+<h1>Reloj</h1>
+
+<button [disabled]="!startEnabled" (click)="start()">start</button>
+<button [disabled]="!pauseEnabled" (click)="pause()">pause</button>
+<button [disabled]="!resumeEnabled" (click)="resume()">resume</button>
+<button [disabled]="!invertEnabled" (click)="invert()">invert</button>
+<button [disabled]="!resetEnabled" (click)="reset()">reset</button>
+
+<br>
+<div>{{digitacion}} </div>
+<br>
+<div>Nombre : {{nombre}}</div>
+<div>Interval ID : {{interval_ID}}</div>
+<div>sentido : {{sentidoInvert}}</div>
+<div>Total de Segundos : {{totalSegundos}}</div>
