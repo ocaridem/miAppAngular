@@ -14,9 +14,10 @@ import { ConversorGradosComponent } from './components/conversor-grados/converso
 
 //servicios
 import { ConversorTemperaturaService} from './services/conversor-temperatura.service';
+import { ConversorDivisasComponent } from './components/conversor-divisas/conversor-divisas.component';
 
 @NgModule({
-  declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent], //aqui van los "Component"
+  declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent, ConversorDivisasComponent], //aqui van los "Component"
   imports:      [BrowserModule,FormsModule], //FormsModule es para hacer 2-way databinding
   providers:    [ConversorTemperaturaService], //aqui van los "Injectable"
   bootstrap:    [AppComponent]

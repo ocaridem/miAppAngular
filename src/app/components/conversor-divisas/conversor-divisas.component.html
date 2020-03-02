@@ -1,0 +1,39 @@
+<h1>Conversor de Divisas</h1>
+
+<div>
+<table>
+    <tr>
+        <td>
+            <select (change)="comprobar('B')" [(ngModel)]="monedaA">
+                <option>Euro</option>
+                <option>Franco_Suizo</option>
+                <option>Dolar</option>
+                <option>Yen_Japones</option>
+                <option>Rupia_India</option>
+            </select>
+        </td>
+        <td style="width:30px"></td>
+        <td>
+            <select (change)="comprobar('A')" [(ngModel)]="monedaB">
+                <option>Euro</option>
+                <option>Franco_Suizo</option>
+                <option>Dolar</option>
+                <option>Yen_Japones</option>
+                <option>Rupia_India</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input (change)="comprobar('B')" (keyup)="comprobar('B')" type="number" [(ngModel)]="numeroA"/>
+        </td>
+        <td style="width:30px"></td>
+        <td>
+            <input (change)="comprobar('A')" (keyup)="comprobar('A')" type="number" [(ngModel)]="numeroB"/>
+        </td>
+    </tr>
+</table>
+</div>
+
+
+
