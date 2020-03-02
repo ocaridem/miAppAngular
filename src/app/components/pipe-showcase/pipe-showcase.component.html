@@ -1,0 +1,45 @@
+
+<h2>Pipe Showcase ( Ejemplos )</h2>
+
+<p>
+    {{nombre}}<br>
+    {{nombre|uppercase}}<br>
+    {{nombre|lowercase}}
+</p>
+
+<p>{{titulo|titlecase}}</p>
+
+<p>
+    {{fecha1|date:'dd-MM-yyyy HH:mm:ss'}}<br>
+    {{fecha2|date:'dd-MM-yyyy'}}<br>
+    {{fecha1|date:'HH-mm-ss'}}
+</p>
+
+<p>
+    {{importe|currency:'USD'}}<br>
+    {{importe|currency:'EUR'}}
+</p>
+
+<p>
+    {{num1}} : Numero Formateado = {{num1|number:'4.3-3'}}<br>
+    {{num2}} : Numero Formateado = {{num2|number:'4.3-3'}}
+</p>
+
+<h2>Pipes Personalizados ( Ejemplos )</h2>
+
+<p>
+    Tamaño de '{{nombre}}' : {{nombre|charcounter}}<br>
+    Tamaño de '{{titulo}}' : {{titulo|charcounter}}
+</p>
+<p>
+    Reverse de '{{titulo}}' : {{titulo|titlecase|reverser}}
+</p>
+
+<p>
+    {{fecha1|date:'dd-MM-yyyy'}} <strong> -> {{fecha1|trimestre}} Trimestre</strong><br>
+    {{fecha2|date:'dd-MM-yyyy'}} <strong> -> {{fecha2|trimestre}} Trimestre</strong><br>
+</p>
+
+
+
+
