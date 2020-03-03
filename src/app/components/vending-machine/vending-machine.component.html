@@ -1,0 +1,39 @@
+<h2>Maquina de Vending</h2>
+
+<table>
+    <tr>
+        <th>Codigo</th>
+        <th>Producto</th>
+        <th class="precio">Precio</th>
+        <th class="stock">Stock</th>
+    </tr>
+    <tr [ngClass]="{'agotado' : producto.stock===0}" *ngFor="let producto of productos; index as i">
+        <td class="codigo">{{producto.fila}}{{producto.codigo}}</td>
+        <td class="nombre">{{producto.nombre}}</td>
+        <td class="precio">{{producto.precio}}</td>
+        <td class="stock">{{producto.stock}}</td>
+    </tr>
+    <tr>
+        <td>
+            <select [(ngModel)]="letra">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+        </td>
+        <td colspan="2">
+            <input type="number" [(ngModel)]="numero">
+        </td>
+        <td>
+            <button (click)="comprar()">Comprar Producto</button>
+        </td>
+    </tr>
+    <tr>
+        <td id="mensaje" colspan="4">
+            <label>{{mensaje}}</label>
+        </td>
+    </tr>
+</table>
+
+
+

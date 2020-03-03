@@ -1,0 +1,28 @@
+
+<style>
+    th{
+        text-align: left;
+        padding-right: 5px;
+    }
+</style>
+
+<h2>Listado de Productos</h2>
+
+<table>
+    <tr>
+        <th>Indice ASC</th>
+        <th>Indice DESC</th>
+        <th style="width:70px"></th>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Codigo</th>
+    </tr>
+    <tr *ngFor="let producto of productos; index as i">
+        <td>{{i+1}}</td>
+        <td>{{productos.length - i}}</td>
+        <td></td>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.codigo}}</td>
+    </tr>
+</table>

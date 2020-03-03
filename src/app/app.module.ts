@@ -19,9 +19,12 @@ import { PipeShowcaseComponent } from './components/pipe-showcase/pipe-showcase.
 import { CharCounterPipe } from './pipes/char-counter.pipe';
 import { ReverserPipe } from './pipes/reverser.pipe';
 import { TrimestrePipe } from './pipes/trimestre.pipe';
+import { List1Component } from './components/list1/list1.component';
+import { List2Component } from './components/list2/list2.component';
+import { VendingMachineComponent } from './components/vending-machine/vending-machine.component';
 
 @NgModule({
-  declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent, ConversorDivisasComponent, PipeShowcaseComponent, CharCounterPipe, ReverserPipe, TrimestrePipe], //aqui van los "Component"
+  declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent, ConversorDivisasComponent, PipeShowcaseComponent, CharCounterPipe, ReverserPipe, TrimestrePipe, List1Component, List2Component, VendingMachineComponent], //aqui van los "Component"
   imports:      [BrowserModule,FormsModule], //FormsModule es para hacer 2-way databinding
   providers:    [ConversorTemperaturaService], //aqui van los "Injectable"
   bootstrap:    [AppComponent]
