@@ -7,7 +7,7 @@ td{
     padding-right:5px;
 }
 
-input{
+input,label{
     width: 100%;
 }
 
@@ -23,6 +23,11 @@ button{
 }
 .precio,.stock{
     text-align: right;
+}
+.contadorMensaje{
+    text-align: right;
+    font-size: smaller;
+    color: darkred;
 }
 
 #mensaje{

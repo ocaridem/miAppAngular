@@ -10,6 +10,8 @@ export class VendingMachineComponent implements OnInit {
 
   constructor() { }
 
+  intervalID:any=undefined;
+  intervalCounter:number=undefined;
   productos:Producto[] = [];
   letra:string="";
   numero:number=undefined;
@@ -60,6 +62,28 @@ export class VendingMachineComponent implements OnInit {
 
     this.letra=undefined;
     this.numero=undefined;
+
+    if (this.mensaje!==""){
+        //VERSION 1
+        //setTimeout( () => {this.mensaje="";},2000);
+
+        //VERSION 2
+        //2 Segundos
+        this.intervalCounter=200;
+        this.intervalID = setInterval(() => {
+          this.intervalCounter-=1;
+          if (this.intervalCounter===0){
+            this.mensaje="";
+            this.intervalCounter=undefined;
+            clearInterval(this.intervalID);
+          }
+        }, 10);
+
+
+
+        
+    }
+
   }
 
 
