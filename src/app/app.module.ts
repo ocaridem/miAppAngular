@@ -17,6 +17,11 @@ import { List1Component } from './components/list1/list1.component';
 import { List2Component } from './components/list2/list2.component';
 import { VendingMachineComponent } from './components/vending-machine/vending-machine.component';
 
+import { Material1Component } from './components/material1/material1.component';
+import { Material2Component } from './components/material2/material2.component';
+import { Material1v2Component } from './components/material1v2/material1v2.component';
+import { Material3Component } from './components/material3/material3.component';
+
 //servicios
 import { ConversorTemperaturaService} from './services/conversor-temperatura.service';
 
@@ -27,25 +32,23 @@ import { TrimestrePipe } from './pipes/trimestre.pipe';
 
 //material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Material1Component } from './components/material1/material1.component';
 import {MatTableModule} from '@angular/material/table';
-import { Material2Component } from './components/material2/material2.component';
 import {MatCardModule} from '@angular/material/card';
-import { Material1v2Component } from './components/material1v2/material1v2.component';
-import { Material3Component } from './components/material3/material3.component';
+import {MatInputModule} from '@angular/material/input';
+
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 //Se añade un Modulo Propio que contiene otras importaciones de Modulos
-import { MaterialModule } from './modules/material/material.module';
-
-
-
+//import { MaterialModule } from './modules/material/material.module';
 
 
 
 
 @NgModule({
   declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent, ConversorDivisasComponent, PipeShowcaseComponent, CharCounterPipe, ReverserPipe, TrimestrePipe, List1Component, List2Component, VendingMachineComponent, Material1Component, Material2Component, Material1v2Component, Material3Component], //aqui van los "Component"
-  imports:      [BrowserModule,FormsModule, BrowserAnimationsModule,MatTableModule,MatCardModule,MaterialModule], //FormsModule es para hacer 2-way databinding
+  imports:      [BrowserModule,FormsModule, BrowserAnimationsModule,MatTableModule,MatCardModule,MatInputModule], //FormsModule es para hacer 2-way databinding
   providers:    [ConversorTemperaturaService], //aqui van los "Injectable"
   bootstrap:    [AppComponent]
 })
