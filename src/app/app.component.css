@@ -1,9 +1,9 @@
-body{
+.principal{
     margin-top: 10px;
     margin-left: 300px;
     margin-right: 300px;
 }
-header{
+.principal header{
 
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ header{
     box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.55);
 }
 
-div{
+.principal div{
     margin-top: 25px;
     margin-bottom: 10px;
     
@@ -46,7 +46,7 @@ div{
 
 }
 
-h1{
+.principal h1{
     display: flex;
     justify-content: center;
     align-items: center;
