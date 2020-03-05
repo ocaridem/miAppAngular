@@ -1,0 +1,26 @@
+<h2>HttpClient - Paises</h2>
+
+<p>nombre que proviene del servicio : {{texto}}</p>
+
+<input type="text" [(ngModel)]="nombre"/>
+<button (click)="buscar()">Buscar</button>
+
+<div *ngIf="pais">
+    <p>Nombre del Pais Buscado : {{pais[0].name}}</p>
+    <p>Capital : {{pais[0].capital}}</p>
+    <p>Poblacion : {{pais[0].population}}</p>
+</div>
+
+<hr>
+
+<table *ngIf="paises" border="1px">
+    <tr>
+        <th>Pais</th>
+        <th>Capital</th>
+    </tr>
+
+    <tr *ngFor="let pais of paises">
+        <td>{{pais.name}}</td>
+        <td>{{pais.capital}}</td>
+    </tr>
+</table>

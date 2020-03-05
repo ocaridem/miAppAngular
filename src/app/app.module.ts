@@ -24,6 +24,7 @@ import { Material3Component } from './components/material3/material3.component';
 
 //servicios
 import { ConversorTemperaturaService} from './services/conversor-temperatura.service';
+import { ClientePaisesService } from './services/cliente-paises.service';
 
 //pipes
 import { CharCounterPipe } from './pipes/char-counter.pipe';
@@ -32,24 +33,26 @@ import { TrimestrePipe } from './pipes/trimestre.pipe';
 
 //material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
+/*
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-
+*/
 
 //Se añade un Modulo Propio que contiene otras importaciones de Modulos
-//import { MaterialModule } from './modules/material/material.module';
-
+import { MaterialModule } from './modules/material/material.module';
+import { ClientePaisesComponent } from './components/cliente-paises/cliente-paises.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent, ConversorDivisasComponent, PipeShowcaseComponent, CharCounterPipe, ReverserPipe, TrimestrePipe, List1Component, List2Component, VendingMachineComponent, Material1Component, Material2Component, Material1v2Component, Material3Component], //aqui van los "Component"
-  imports:      [BrowserModule,FormsModule, BrowserAnimationsModule,MatTableModule,MatCardModule,MatInputModule], //FormsModule es para hacer 2-way databinding
-  providers:    [ConversorTemperaturaService], //aqui van los "Injectable"
+  declarations: [AppComponent, CalculatorComponent, RelojComponent, BoxComponent, ConversorGradosComponent, ConversorDivisasComponent, PipeShowcaseComponent, CharCounterPipe, ReverserPipe, TrimestrePipe, List1Component, List2Component, VendingMachineComponent, Material1Component, Material2Component, Material1v2Component, Material3Component, ClientePaisesComponent], //aqui van los "Component"
+  imports:      [BrowserModule,FormsModule, BrowserAnimationsModule,MaterialModule,MatCardModule,HttpClientModule], //FormsModule es para hacer 2-way databinding
+  providers:    [ConversorTemperaturaService,ClientePaisesService], //aqui van los "Injectable"
   bootstrap:    [AppComponent]
 })
 export class AppModule { }

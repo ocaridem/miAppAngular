@@ -12,7 +12,7 @@
     background-size: cover;
   }
   
-  mat-card-content{
+mat-card-content{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size : 10px;
     font-style: italic;
